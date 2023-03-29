@@ -1,0 +1,183 @@
+/* ********* general css ********** */
+.container {
+    max-width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+}
+html, body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+}
+.btn-main {
+    margin: auto;
+    width: 50%;
+    height: 90px;
+    width: 90px;
+	border-radius: 35%;
+	border:1px solid #405218;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+/* ********* #header ********** */
+#header {
+    height: 85vh;
+    text-align: center;
+    padding: 5px;
+    background-image: url("images/family2.jpg"),
+    linear-gradient(to right, rgb(77, 74, 92) , rgb(116, 94, 94));
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#header nav {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+.navbar-links {
+    display: flex;
+    color: white;
+    font-weight: 600;
+}
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li {
+    list-style: none;
+}
+.navbar-links ul a {
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem;
+    display: block;
+}
+.navbar-links li a:hover {
+    background-color: rgb(24, 12, 55);
+    color: white;
+}
+#header .h1 {
+    margin: 100px;
+}
+.toggle-Button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    flex-direction: column;
+    display: none;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.toggle-Button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(39, 24, 24);
+    border-radius: 10px;
+}
+#buttons {
+ display: flex;
+ margin: 100px;
+}
+#buttons a {
+    text-decoration: none;
+    color: inherit;
+}
+.panicButton h3 {
+    padding: 15px;
+}
+.panicButton {
+    background:linear-gradient(to bottom, #c62d1fec 5%, #f24337 100%);
+	background-color:#c62d1f;
+    box-shadow: 3px 4px 0px 0px #04ec68;
+}
+.panicButton:hover, .medicButton:hover {
+    transform: translateY(-5px);
+}
+.medicButton {
+    background:linear-gradient(to bottom, #04421e 5%, #0ca565 100%);
+	background-color:#b90c0c;
+    box-shadow: 3px 4px 0px 0px #e7210f;
+}
+.medicButton h3 {
+    padding: 15px;
+}
+/* ***********  #FOOTER ************ */
+#footer {
+    background-color: rgba(0, 0, 0, 0.986);
+    height: 15vh;
+    padding: 5px;
+}
+#footer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+#footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+#footer ul li a:hover {
+    color: rgb(102, 96, 131);
+}
+/* *********** RESPONSIVE ********** */
+@media screen and (max-width: 768px) {
+    #header .h1 {
+        margin: 50px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .toggle-Button {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    #header nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-links ul li {
+        background-color: rgba(11, 11, 11, 0.616);
+        text-align: center;
+    }
+    .navbar-links ul li a {
+        padding: 10px;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+    #header .h1 {
+        margin: 10px 0;
+    }
+    #buttons {
+        padding: 10px;
+        margin: 0;
+        display: block;
+       }
+    .panicButton, .medicButton {
+        display: block;
+        margin-top: 20px;
+        max-height: 90px;
+        max-width: 90px;
+    }
+    .h1.active {
+        display: none;
+    }
+  } 
